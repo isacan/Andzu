@@ -1,4 +1,4 @@
-package com.canakkoca.andzu;
+package com.canakkoca.sample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.canakkoca.andzu;
+package com.canakkoca.sample;
 
 import org.junit.Test;
 
