@@ -1,5 +1,6 @@
 package com.canakkoca.andzu.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import com.canakkoca.andzu.R;
 import com.canakkoca.andzu.bubbles.BubbleLayout;
 import com.canakkoca.andzu.bubbles.BubblesManager;
 import com.canakkoca.andzu.bubbles.OnInitializedCallback;
+import com.canakkoca.andzu.network.activities.NetworkLogsActivity;
 
 /**
  * Created by can.akkoca on 4/11/2017.
@@ -58,6 +60,7 @@ public class AndzuActivity extends AppCompatActivity {
             public void onBubbleClick(BubbleLayout bubble) {
                 Toast.makeText(getApplicationContext(), "Clicked !",
                         Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), NetworkLogsActivity.class));
             }
         });
         bubbleView.setShouldStickToWall(true);

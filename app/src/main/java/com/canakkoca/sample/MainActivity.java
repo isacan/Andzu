@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.canakkoca.andzu.base.AndzuActivity;
+import com.canakkoca.andzu.base.AndzuApp;
 import com.canakkoca.andzu.network.LoggingInterceptor;
 
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class MainActivity extends AndzuActivity {
         initAndzu();
 
 
-        LoggingInterceptor interceptor = new LoggingInterceptor();
+        LoggingInterceptor interceptor = new LoggingInterceptor((AndzuApp) getApplication());
 
         final OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
