@@ -3,6 +3,7 @@ package com.canakkoca.andzu.network.models;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 
+import java.io.Serializable;
 import java.util.List;
 import org.greenrobot.greendao.annotation.Generated;
 
@@ -11,7 +12,9 @@ import org.greenrobot.greendao.annotation.Generated;
  */
 
 @Entity
-public class NetworkLog {
+public class NetworkLog  implements Serializable{
+
+    private static final long serialVersionUID = 12331L;
 
     @Id
     private Long id;
@@ -23,11 +26,12 @@ public class NetworkLog {
     private String responseData;
     private Double duration;
     private String errorClientDesc;
+    private String postData;
 
-    @Generated(hash = 1681974584)
+    @Generated(hash = 1773455752)
     public NetworkLog(Long id, String requestType, String url, Long date,
             String headers, String responseCode, String responseData,
-            Double duration, String errorClientDesc) {
+            Double duration, String errorClientDesc, String postData) {
         this.id = id;
         this.requestType = requestType;
         this.url = url;
@@ -37,6 +41,7 @@ public class NetworkLog {
         this.responseData = responseData;
         this.duration = duration;
         this.errorClientDesc = errorClientDesc;
+        this.postData = postData;
     }
 
     @Generated(hash = 156192081)
@@ -113,5 +118,13 @@ public class NetworkLog {
 
     public void setErrorClientDesc(String errorClientDesc) {
         this.errorClientDesc = errorClientDesc;
+    }
+
+    public String getPostData() {
+        return postData;
+    }
+
+    public void setPostData(String postData) {
+        this.postData = postData;
     }
 }
