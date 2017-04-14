@@ -37,6 +37,4 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     compile 'org.greenrobot:greendao:3.2.2'
-    compile 'com.drivemode:TimberLorry:1.0.0@aar'
-    compile 'com.drivemode:TimberLorry-Plug:1.0.0@aar'
 }
