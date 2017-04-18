@@ -16,8 +16,12 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
         }
     }
 }
@@ -37,4 +41,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     compile 'org.greenrobot:greendao:3.2.2'
+    compile 'com.google.code.gson:gson:2.7'
 }

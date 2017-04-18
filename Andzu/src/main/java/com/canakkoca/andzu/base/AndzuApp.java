@@ -2,11 +2,8 @@
 package com.canakkoca.andzu.base;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.canakkoca.andzu.network.models.DaoMaster;
-import com.canakkoca.andzu.network.models.DaoSession;
-
+import com.canakkoca.andzu.utils.Logger;
 
 import org.greenrobot.greendao.database.Database;
 
@@ -28,7 +25,7 @@ public class AndzuApp extends Application {
         Database db = helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
 
-        Log.d("asdada","asdasdasdasdas");
+        Logger.init(this);
     }
 
     public DaoSession getDaoSession() {

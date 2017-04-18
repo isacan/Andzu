@@ -6,7 +6,8 @@ import android.util.Log;
 
 import com.canakkoca.andzu.base.AndzuActivity;
 import com.canakkoca.andzu.base.AndzuApp;
-import com.canakkoca.andzu.network.LoggingInterceptor;
+import com.canakkoca.andzu.utils.Logger;
+import com.canakkoca.andzu.utils.LoggingInterceptor;
 
 import java.io.IOException;
 
@@ -58,6 +59,16 @@ public class MainActivity extends AndzuActivity {
                 return null;
             }
         }.execute();
+
+        Logger.inf("info");
+
+        Logger.err("error",Logger.HI_PRI);
+
+        Logger.d("debug");
+
+        Logger.v("verbose",Logger.LOW_PRI);
+
+        Logger.w("warn");
 
     }
 }

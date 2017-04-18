@@ -10,8 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.canakkoca.andzu.R;
-import com.canakkoca.andzu.log.fragments.AppLogsFragment;
-import com.canakkoca.andzu.network.fragments.NetworkLogsFragment;
+import com.canakkoca.andzu.fragments.AppLogsFragment;
+import com.canakkoca.andzu.fragments.NetworkLogsFragment;
 
 import java.util.ArrayList;
 import java.util.List;

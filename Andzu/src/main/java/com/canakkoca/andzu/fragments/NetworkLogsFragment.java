@@ -1,4 +1,4 @@
-package com.canakkoca.andzu.network.fragments;
+package com.canakkoca.andzu.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,11 @@ import android.view.ViewGroup;
 
 import com.canakkoca.andzu.R;
 import com.canakkoca.andzu.base.AndzuApp;
-import com.canakkoca.andzu.network.activities.NetworkLogDetailActivity;
-import com.canakkoca.andzu.network.adapter.NetworkLogAdapter;
-import com.canakkoca.andzu.network.models.DaoSession;
-import com.canakkoca.andzu.network.models.NetworkLog;
-import com.canakkoca.andzu.network.models.NetworkLogDao;
+import com.canakkoca.andzu.base.DaoSession;
+import com.canakkoca.andzu.base.NetworkLogDao;
+import com.canakkoca.andzu.activities.NetworkLogDetailActivity;
+import com.canakkoca.andzu.adapters.NetworkLogAdapter;
+import com.canakkoca.andzu.base.NetworkLog;
 import com.canakkoca.andzu.utils.RecyclerTouchListener;
 
 import org.greenrobot.greendao.query.Query;

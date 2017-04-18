@@ -1,4 +1,4 @@
-package com.canakkoca.andzu.network.activities;
+package com.canakkoca.andzu.activities;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.canakkoca.andzu.R;
-import com.canakkoca.andzu.network.models.NetworkLog;
+import com.canakkoca.andzu.base.NetworkLog;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

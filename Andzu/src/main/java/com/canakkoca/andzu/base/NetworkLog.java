@@ -1,4 +1,4 @@
-package com.canakkoca.andzu.network.models;
+package com.canakkoca.andzu.base;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
