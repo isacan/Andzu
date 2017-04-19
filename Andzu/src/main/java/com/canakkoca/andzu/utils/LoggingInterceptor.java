@@ -8,8 +8,10 @@ import java.io.IOException;
 import java.util.Date;
 
 import okhttp3.Interceptor;
+import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import okio.Buffer;
 
 /**
@@ -44,13 +46,16 @@ public class LoggingInterceptor implements Interceptor {
         networkLog.setHeaders(String.valueOf(response.headers()));
         networkLog.setRequestType(request.method());
         networkLog.setResponseCode(String.valueOf(response.code()));
-        networkLog.setResponseData(response.body().string());
+        String body = response.body().string();
+        networkLog.setResponseData(body);
         networkLog.setUrl(String.valueOf(request.url()));
         networkLog.setPostData(bodyToString(request));
 
+        MediaType contentType = response.body().contentType();
+
         networkLogDao.insert(networkLog);
 
-        return response;
+        return response.newBuilder().body(ResponseBody.create(contentType,body)).build();
     }
 
     private static String bodyToString(final Request request){
