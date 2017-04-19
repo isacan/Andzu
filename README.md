@@ -95,7 +95,8 @@ Add it in your root build.gradle at the end of repositories:
  - LinkedIn https://www.linkedin.com/in/isa-can-akkoca-37650b2a/
  
  
-# Inspiration from https://github.com/remirobert/Dotzu
+# Inspiration 
+https://github.com/remirobert/Dotzu
  
 # License
 Andzu is released under the [MIT License.](https://opensource.org/licenses/MIT)
