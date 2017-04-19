@@ -71,7 +71,7 @@ public class AndzuActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), MainAndzuActivity.class));
             }
         });
-        bubbleView.setShouldStickToWall(true);
+        bubbleView.setShouldStickToWall(false);
         bubblesManager.addBubble(bubbleView, 60, 20);
     }
 

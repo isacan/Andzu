@@ -41,7 +41,7 @@ public class MainAndzuActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new NetworkLogsFragment(), "Network");
         adapter.addFragment(new AppLogsFragment(), "Logs");
-        adapter.addFragment(new NetworkLogsFragment(), "Settings");
+        //adapter.addFragment(new NetworkLogsFragment(), "Settings");
         viewPager.setAdapter(adapter);
     }
 
