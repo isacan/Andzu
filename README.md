@@ -7,6 +7,10 @@ In-App Android Debugging Tool With Enhanced Logging, Networking Info, Crash repo
 
 The debugger tool for Android developer. Display logs, network request,  while using the app. Easy accessible with its bubble head button :radio_button:. Easy to integrate in any apps, to handle development or testing apps easier. First version, there is plenty of room for improvement.
 
+<p align="center">
+ <img src="https://media.giphy.com/media/PbGjfYclH0hry/giphy.gif">
+</p>
+
 # Usage
 
 - Extend your Application class from "AndzuApp"
