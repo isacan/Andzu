@@ -37,7 +37,7 @@ The debugger tool for Android developer. Display logs, network request,  while u
     ```
 - For Network Request Log addInterceptor "AndzuInterceptor"
     ```java
-    LoggingInterceptor interceptor = new LoggingInterceptor((AndzuApp) getApplication());
+    LoggingInterceptor interceptor = new LoggingInterceptor();
 
     OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(interceptor)
@@ -71,7 +71,7 @@ Download the latest JAR or grab via Maven:
     <dependency>
 	    <groupId>com.github.isacan</groupId>
 	    <artifactId>Andzu</artifactId>
-	    <version>0.27</version>
+	    <version>0.28</version>
 	</dependency>
   ```  
 or Gradle:
@@ -87,7 +87,7 @@ Add it in your root build.gradle at the end of repositories:
   Add the dependency
   ```java
   dependencies {
-	        compile 'com.github.isacan:Andzu:0.27'
+	        compile 'com.github.isacan:Andzu:0.28'
 	}
   ```
  
