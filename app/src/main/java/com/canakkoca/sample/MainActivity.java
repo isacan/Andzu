@@ -28,11 +28,8 @@ public class MainActivity extends AndzuActivity {
 
         initAndzu();
 
-
-        LoggingInterceptor interceptor = new LoggingInterceptor((AndzuApp) getApplication());
-
         final OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor(interceptor)
+                .addInterceptor(new LoggingInterceptor())
                 .build();
 
         RequestBody formBody = new FormBody.Builder()

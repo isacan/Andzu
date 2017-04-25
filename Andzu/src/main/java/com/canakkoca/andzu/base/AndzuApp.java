@@ -17,10 +17,12 @@ public class AndzuApp extends Application {
 
     private DaoSession daoSession;
 
+    private static AndzuApp andzuApp;
+
     @Override
     public void onCreate() {
         super.onCreate();
-
+        andzuApp = this;
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this,"andzu-db");
         Database db = helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
@@ -30,5 +32,9 @@ public class AndzuApp extends Application {
 
     public DaoSession getDaoSession() {
        return daoSession;
+    }
+
+    public static AndzuApp getAndzuApp() {
+        return andzuApp;
     }
 }

@@ -17,15 +17,16 @@ import okio.Buffer;
 /**
  * Created by can.akkoca on 4/11/2017.
  */
-
 public class LoggingInterceptor implements Interceptor {
 
-    private AndzuApp app;
     private NetworkLogDao networkLogDao;
 
-    public LoggingInterceptor(AndzuApp app){
-        this.app = app;
-        networkLogDao = app.getDaoSession().getNetworkLogDao();
+    public LoggingInterceptor(){
+        if(AndzuApp.getAndzuApp() == null){
+            throw new IllegalStateException("You need to implement your " +
+                    "Application class from AndzuApp");
+        }
+        networkLogDao = AndzuApp.getAndzuApp().getDaoSession().getNetworkLogDao();
     }
 
     @Override
