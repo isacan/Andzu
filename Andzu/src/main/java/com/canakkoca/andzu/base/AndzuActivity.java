@@ -38,8 +38,9 @@ public class AndzuActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if(isAndzuEnabled)
+        if(isAndzuEnabled) {
             bubbleView.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -50,16 +51,18 @@ public class AndzuActivity extends AppCompatActivity {
     }
 
     public void initAndzu(){
-        bubblesManager = new BubblesManager.Builder(this)
-                .setInitializationCallback(new OnInitializedCallback() {
-                    @Override
-                    public void onInitialized() {
-                        isAndzuEnabled = true;
-                        addNewBubble();
-                    }
-                })
-                .build();
-        bubblesManager.initialize();
+        if(!isAndzuEnabled) {
+            bubblesManager = new BubblesManager.Builder(getApplicationContext())
+                    .setInitializationCallback(new OnInitializedCallback() {
+                        @Override
+                        public void onInitialized() {
+                            isAndzuEnabled = true;
+                            addNewBubble();
+                        }
+                    })
+                    .build();
+            bubblesManager.initialize();
+        }
     }
 
     private void addNewBubble() {
