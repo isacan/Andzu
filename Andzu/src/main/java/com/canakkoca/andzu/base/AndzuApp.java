@@ -33,6 +33,8 @@ public class AndzuApp extends Application {
 
     private static boolean isAndzuEnabled;
 
+    private static boolean isAndzuActivated;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -74,9 +76,12 @@ public class AndzuApp extends Application {
 
             @Override
             public void onBubbleClick(BubbleLayout bubble) {
-                Intent i = new Intent(getApplicationContext(),MainAndzuActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(i);
+                if(!isAndzuActivated) {
+                    isAndzuActivated = true;
+                    Intent i = new Intent(getApplicationContext(), MainAndzuActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(i);
+                }
             }
         });
         bubbleView.setShouldStickToWall(false);
@@ -92,20 +97,30 @@ public class AndzuApp extends Application {
         @Override
         public void onActivityStarted(Activity activity) {
             ActiveActivitiesTracker.activityStarted();
+            if(activity instanceof MainAndzuActivity){
+                isAndzuActivated = true;
+            }
         }
 
         @Override
         public void onActivityResumed(Activity activity) {
-
+            if(activity instanceof MainAndzuActivity){
+                isAndzuActivated = true;
+            }
         }
 
         @Override
         public void onActivityPaused(Activity activity) {
-
+            if(activity instanceof MainAndzuActivity){
+                isAndzuActivated = false;
+            }
         }
 
         @Override
         public void onActivityStopped(Activity activity) {
+            if(activity instanceof MainAndzuActivity){
+                isAndzuActivated = false;
+            }
             ActiveActivitiesTracker.activityStopped();
         }
 
