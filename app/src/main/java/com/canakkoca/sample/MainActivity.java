@@ -2,10 +2,9 @@ package com.canakkoca.sample;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.canakkoca.andzu.base.AndzuActivity;
-import com.canakkoca.andzu.base.AndzuApp;
 import com.canakkoca.andzu.utils.Logger;
 import com.canakkoca.andzu.utils.LoggingInterceptor;
 
@@ -17,7 +16,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class MainActivity extends AndzuActivity {
+public class MainActivity extends AppCompatActivity {
 
 
 
@@ -25,8 +24,6 @@ public class MainActivity extends AndzuActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        initAndzu();
 
         final OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(new LoggingInterceptor())

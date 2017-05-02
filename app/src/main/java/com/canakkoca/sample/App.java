@@ -11,5 +11,6 @@ public class App extends AndzuApp {
     @Override
     public void onCreate() {
         super.onCreate();
+        initAndzu();
     }
 }
