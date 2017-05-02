@@ -15,23 +15,13 @@ The debugger tool for Android developer. Display logs, network request,  while u
 
 # Usage
 
-- Extend your Application class from "AndzuApp"
+- Extend your Application class from "AndzuApp"  and onCreate call initAndzu() method for show Bubble
     ```java
     public class App extends AndzuApp {
         @Override
         public void onCreate() {
             super.onCreate();
-        }
-    }
-    ```
-- Extend your Activity from "AndzuActivity" and onCreate call initAndzu() method for show Bubble
-    ```java
-    public class MainActivity extends AndzuActivity {
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            initAndzu();
+	    initAndzu();
         }
     }
     ```
@@ -71,7 +61,7 @@ Download the latest JAR or grab via Maven:
     <dependency>
 	    <groupId>com.github.isacan</groupId>
 	    <artifactId>Andzu</artifactId>
-	    <version>0.29</version>
+	    <version>0.35</version>
 	</dependency>
   ```  
 or Gradle:
@@ -87,7 +77,7 @@ Add it in your root build.gradle at the end of repositories:
   Add the dependency
   ```java
   dependencies {
-	        compile 'com.github.isacan:Andzu:0.29'
+	        compile 'com.github.isacan:Andzu:0.35'
 	}
   ```
  
