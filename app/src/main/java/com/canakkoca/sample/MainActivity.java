@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         final Request request = new Request.Builder()
-                .url("http://www.vogella.com/index.html")
+                .url("https://gist.githubusercontent.com/RIAEvangelist/63a5618119170384386e/" +
+                        "raw/600df29651d9e4fbffc3af98580a36bcc86e71c3/dominos-sample-request.json")
                 .build();
 
 

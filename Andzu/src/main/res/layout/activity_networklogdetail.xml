@@ -6,8 +6,8 @@
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="#191919">
     <RelativeLayout
         android:id="@+id/relative1"
         android:layout_width="match_parent"
@@ -26,7 +26,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/code"
@@ -34,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginRight="8dp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/url"
@@ -42,7 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/date"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp" />
+            android:layout_marginRight="16dp"
+            android:textColor="@color/white"/>
 
         <ImageView
             android:id="@+id/code_img"
@@ -50,7 +53,7 @@
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:background="@android:color/black"
+            android:background="@android:color/white"
             android:layout_marginLeft="8dp"/>
 
     </RelativeLayout>
@@ -58,7 +61,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
     <RelativeLayout
         android:id="@+id/relative2"
@@ -78,7 +81,7 @@
             android:layout_height="wrap_content"
             android:text="Request latency : "
             android:textSize="25sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginLeft="16dp"
             android:id="@+id/textView2" />
 
@@ -88,7 +91,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="25sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/textView2"
             android:layout_toEndOf="@+id/textView2" />
@@ -99,7 +102,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -108,28 +111,29 @@
         android:layout_marginLeft="16dp"
         android:text="Headers"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/headers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:text="asda"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -138,13 +142,13 @@
         android:layout_marginLeft="16dp"
         android:text="Http Post Data"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/postData"
@@ -153,13 +157,14 @@
         android:layout_marginLeft="16dp"
         android:text="asda"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginRight="16dp"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -168,20 +173,23 @@
         android:layout_marginLeft="16dp"
         android:text="Body Response"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"/>
+        android:background="@color/white"/>
 
 
     <TextView
         android:id="@+id/response"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/white"/>
 
 </LinearLayout>
 

@@ -50,6 +50,7 @@ public class NetworkLogDetailActivity extends AppCompatActivity {
         headers.setText(networkLog.getHeaders());
         postData.setText(networkLog.getPostData());
         response.setText(networkLog.getResponseData());
+        response.setTextSize(15);
         postData.setText(networkLog.getPostData());
 
         if(networkLog.getResponseCode().startsWith("2")){
