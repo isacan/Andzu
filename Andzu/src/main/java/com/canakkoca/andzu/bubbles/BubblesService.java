@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Binder;
+import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
@@ -99,11 +100,12 @@ public class BubblesService extends Service {
 
     private WindowManager.LayoutParams buildLayoutParamsForBubble(int x, int y) {
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-                WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_TOAST,
+                WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT,
+                Build.VERSION.SDK_INT > 25 ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY :
+                        WindowManager.LayoutParams.TYPE_PHONE,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-                PixelFormat.TRANSPARENT);
+                PixelFormat.TRANSLUCENT
+        );
         params.gravity = Gravity.TOP | Gravity.START;
         params.x = x;
         params.y = y;
@@ -114,11 +116,12 @@ public class BubblesService extends Service {
         int x = 0;
         int y = 0;
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.TYPE_TOAST,
+                WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT,
+                Build.VERSION.SDK_INT > 25 ? WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY :
+                        WindowManager.LayoutParams.TYPE_PHONE,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-                PixelFormat.TRANSPARENT);
+                PixelFormat.TRANSLUCENT
+        );
         params.x = x;
         params.y = y;
         return params;
