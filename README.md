@@ -1,8 +1,8 @@
 [![](https://jitpack.io/v/isacan/Andzu.svg)](https://jitpack.io/#isacan/Andzu)
 
-![](https://camo.githubusercontent.com/d0e25b09a82bc4bfde9f1e048a092752eebbb4f3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75652e7376673f7374796c653d666c6174)
+[![](https://camo.githubusercontent.com/d0e25b09a82bc4bfde9f1e048a092752eebbb4f3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75652e7376673f7374796c653d666c6174)](https://github.com/isacan/Andzu/blob/master/LICENSE)
 
-![](https://img.shields.io/badge/Android%20Arsenal-Andzu-orange.svg?style=flat)
+[![](https://img.shields.io/badge/Android%20Arsenal-Andzu-orange.svg?style=flat)](https://android-arsenal.com/details/1/5620)
 
 # Andzu
 In-App Android Debugging Tool With Enhanced Logging, Networking Info, Crash reporting And More.
