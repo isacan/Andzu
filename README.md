@@ -61,7 +61,7 @@ Download the latest JAR or grab via Maven:
     <dependency>
 	    <groupId>com.github.isacan</groupId>
 	    <artifactId>Andzu</artifactId>
-	    <version>0.4</version>
+	    <version>0.52</version>
 	</dependency>
   ```  
 or Gradle:
@@ -77,7 +77,7 @@ Add it in your root build.gradle at the end of repositories:
   Add the dependency
   ```java
   dependencies {
-	        compile 'com.github.isacan:Andzu:0.4'
+	        compile 'com.github.isacan:Andzu:0.52'
 	}
   ```
  
