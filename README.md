@@ -15,15 +15,44 @@ The debugger tool for Android developer. Display logs, network request,  while u
 
 # Usage
 
-- Extend your Application class from "AndzuApp"  and onCreate call initAndzu() method for show Bubble
+- Extend your Application class from "AndzuApp"
     ```java
     public class App extends AndzuApp {
         @Override
         public void onCreate() {
             super.onCreate();
-	    initAndzu();
         }
     }
+    ```
+- On Start Activity onCreate call permission for <= M or init Andzu from App class
+    ```java
+	@Override
+	public void onCreate() {
+	    super.onCreate();
+	    
+	    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+		    //If the draw over permission is not available open the settings screen
+		    //to grant the permission.
+		    Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+			    Uri.parse("package:" + getPackageName()));
+		    startActivityForResult(intent, 2084);
+            } else {
+            	    App.getInstance().initAndzu();
+           }
+	}
+	
+	@Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == 2084) {
+		    //Check if the permission is granted or not.
+		    if (resultCode == RESULT_OK) {
+			App.getInstance().initAndzu();
+		    } else { //Permission is not available
+		    }
+		} else {
+		    super.onActivityResult(requestCode, resultCode, data);
+		}
+        }
     ```
 - For Network Request Log addInterceptor "AndzuInterceptor"
     ```java
