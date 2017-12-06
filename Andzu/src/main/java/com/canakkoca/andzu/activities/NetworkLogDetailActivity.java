@@ -1,5 +1,6 @@
 package com.canakkoca.andzu.activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.canakkoca.andzu.R;
 import com.canakkoca.andzu.base.NetworkLog;
+import com.google.gson.Gson;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -68,7 +70,11 @@ public class NetworkLogDetailActivity extends AppCompatActivity {
 
         Button btn = findViewById(R.id.shareInfo);
         btn.setOnClickListener(view -> {
-
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, networkLog.toString());
+            sendIntent.setType("text/plain");
+            startActivity(Intent.createChooser(sendIntent,"Share with"));
         });
 
     }

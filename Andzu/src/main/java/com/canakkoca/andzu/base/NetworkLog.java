@@ -5,6 +5,8 @@ import org.greenrobot.greendao.annotation.Id;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Locale;
+
 import org.greenrobot.greendao.annotation.Generated;
 
 /**
@@ -126,5 +128,20 @@ public class NetworkLog  implements Serializable{
 
     public void setPostData(String postData) {
         this.postData = postData;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(Locale.getDefault(),
+                "Request Type : %s \n" +
+                        "Request Url : %s\n" +
+                        "Request Date : %d\n" +
+                        "Request Headers : %s\n" +
+                        "Response Code : %s\n" +
+                        "Response Data : %s\n" +
+                        "Duration : %d\n" +
+                        "Error Client Desc : %s\n" +
+                        "Post Data : %s",requestType,url,date,headers,responseCode,responseData,
+                (long)duration.doubleValue(),errorClientDesc,postData);
     }
 }

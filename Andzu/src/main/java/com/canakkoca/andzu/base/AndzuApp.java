@@ -142,7 +142,7 @@ public class AndzuApp extends Application {
 
         public static void activityStarted()
         {
-            if( sActiveActivities == 0 )
+            if( sActiveActivities == 0 || sActiveActivities == 1)
             {
                 if(isAndzuEnabled)
                     bubbleView.setVisibility(View.VISIBLE);
@@ -157,7 +157,7 @@ public class AndzuApp extends Application {
             {
                 try {
                     if(isAndzuEnabled)
-                        bubblesManager.recycle();
+                        bubbleView.setVisibility(View.GONE);
                 }catch (Exception ignored){
 
                 }
