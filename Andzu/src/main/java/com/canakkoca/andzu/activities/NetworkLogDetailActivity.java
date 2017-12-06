@@ -34,7 +34,7 @@ public class NetworkLogDetailActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
 
-        NetworkLog networkLog = (NetworkLog) getIntent().getSerializableExtra("networkLog");
+        final NetworkLog networkLog = (NetworkLog) getIntent().getSerializableExtra("networkLog");
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
 
@@ -69,12 +69,15 @@ public class NetworkLogDetailActivity extends AppCompatActivity {
         }
 
         Button btn = findViewById(R.id.shareInfo);
-        btn.setOnClickListener(view -> {
-            Intent sendIntent = new Intent();
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, networkLog.toString());
-            sendIntent.setType("text/plain");
-            startActivity(Intent.createChooser(sendIntent,"Share with"));
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, networkLog.toString());
+                sendIntent.setType("text/plain");
+                startActivity(Intent.createChooser(sendIntent,"Share with"));
+            }
         });
 
     }
