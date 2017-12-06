@@ -51,8 +51,10 @@ public class AndzuApp extends Application {
     @Override
     public void onTerminate() {
         super.onTerminate();
-        if(isAndzuEnabled)
-            bubblesManager.recycle();
+        try {
+            if(isAndzuEnabled)
+                bubblesManager.recycle();
+        }catch (Exception ignored){}
     }
 
     public void initAndzu(){
@@ -153,8 +155,12 @@ public class AndzuApp extends Application {
             sActiveActivities--;
             if( sActiveActivities == 0 )
             {
-                if(isAndzuEnabled)
-                    bubblesManager.recycle();
+                try {
+                    if(isAndzuEnabled)
+                        bubblesManager.recycle();
+                }catch (Exception ignored){
+
+                }
             }
         }
     }

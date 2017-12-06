@@ -11,6 +11,12 @@ public class App extends AndzuApp {
     @Override
     public void onCreate() {
         super.onCreate();
-        initAndzu();
+        sInstance = this;
+    }
+
+    private static App sInstance;
+
+    public static App getInstance() {
+        return sInstance;
     }
 }
