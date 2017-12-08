@@ -74,6 +74,14 @@ The debugger tool for Android developer. Display logs, network request,  while u
 
     Logger.w("warn");
     ```
+- You can disable and with enable with these method.
+ ```java
+    //For Disable
+    App.getInstance().disableAndzu(); 
+    
+    //For Enable
+    App.getInstance().enableAndzu();
+ ```
 - That's it
 
 # Installation
@@ -90,7 +98,7 @@ Download the latest JAR or grab via Maven:
     <dependency>
 	    <groupId>com.github.isacan</groupId>
 	    <artifactId>Andzu</artifactId>
-	    <version>0.61</version>
+	    <version>0.65</version>
 	</dependency>
   ```  
 or Gradle:
@@ -106,7 +114,7 @@ Add it in your root build.gradle at the end of repositories:
   Add the dependency
   ```java
   dependencies {
-	        compile 'com.github.isacan:Andzu:0.61'
+	        compile 'com.github.isacan:Andzu:0.65'
 	}
   ```
  
