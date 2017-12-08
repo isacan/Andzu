@@ -81,7 +81,7 @@ The debugger tool for Android developer. Display logs, network request,  while u
     
     //For Enable
     App.getInstance().enableAndzu();
-    ```
+ ```
 - That's it
 
 # Installation
