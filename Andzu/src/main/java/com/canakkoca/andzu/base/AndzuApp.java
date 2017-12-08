@@ -172,4 +172,20 @@ public class AndzuApp extends Application {
     public static AndzuApp getAndzuApp() {
         return andzuApp;
     }
+
+    public void enableAndzu() {
+        if(andzuApp == null)
+            throw new AndzuNotInitializedException("You must call first to use initAndzu method");
+        if(isAndzuEnabled && bubbleView != null){
+            bubbleView.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void disableAndzu() {
+        if(andzuApp == null)
+            throw new AndzuNotInitializedException("You must call first to use initAndzu method");
+        if(isAndzuEnabled && bubbleView != null){
+            bubbleView.setVisibility(View.VISIBLE);
+        }
+    }
 }

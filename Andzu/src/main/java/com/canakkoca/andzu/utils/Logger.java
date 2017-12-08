@@ -38,7 +38,9 @@ public class Logger {
         appLog.setPriority(priority);
         appLog.setMessage(msg);
         appLog.setLog_type("INFO");
-        appLogDao.insert(appLog);
+        if(AndzuApp.getAndzuApp() != null) {
+            appLogDao.insert(appLog);
+        }
     }
 
     public static void inf(String msg) {
@@ -53,7 +55,9 @@ public class Logger {
         appLog.setPriority(priority);
         appLog.setMessage(msg);
         appLog.setLog_type("ERROR");
-        appLogDao.insert(appLog);
+        if(AndzuApp.getAndzuApp() != null) {
+            appLogDao.insert(appLog);
+        }
     }
 
     public static void err(String msg) {
@@ -68,7 +72,9 @@ public class Logger {
         appLog.setPriority(priority);
         appLog.setMessage(msg);
         appLog.setLog_type("DEBUG");
-        appLogDao.insert(appLog);
+        if(AndzuApp.getAndzuApp() != null) {
+            appLogDao.insert(appLog);
+        }
     }
 
     public static void d(String msg) {
@@ -83,7 +89,9 @@ public class Logger {
         appLog.setPriority(priority);
         appLog.setMessage(msg);
         appLog.setLog_type("VERBOSE");
-        appLogDao.insert(appLog);
+        if(AndzuApp.getAndzuApp() != null) {
+            appLogDao.insert(appLog);
+        }
     }
 
     public static void v(String msg) {
@@ -98,7 +106,9 @@ public class Logger {
         appLog.setPriority(priority);
         appLog.setMessage(msg);
         appLog.setLog_type("WARN");
-        appLogDao.insert(appLog);
+        if(AndzuApp.getAndzuApp() != null) {
+            appLogDao.insert(appLog);
+        }
     }
 
     public static void w(String msg) {

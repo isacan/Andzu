@@ -54,7 +54,9 @@ public class LoggingInterceptor implements Interceptor {
 
         MediaType contentType = response.body().contentType();
 
-        networkLogDao.insert(networkLog);
+        if(AndzuApp.getAndzuApp() != null){
+            networkLogDao.insert(networkLog);
+        }
 
         return response.newBuilder().body(ResponseBody.create(contentType,body)).build();
     }
