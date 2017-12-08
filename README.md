@@ -74,6 +74,14 @@ The debugger tool for Android developer. Display logs, network request,  while u
 
     Logger.w("warn");
     ```
+- You can disable and with enable with these method.
+ ```java
+    //For Disable
+    App.getInstance().disableAndzu(); 
+    
+    //For Enable
+    App.getInstance().enableAndzu();
+    ```
 - That's it
 
 # Installation
